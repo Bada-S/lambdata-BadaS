@@ -1,6 +1,6 @@
 from pandas import DataFrame
-
 # TODO helper function from assignment
+
 
 def add_state_names_column(my_df):
     """
@@ -10,12 +10,9 @@ def add_state_names_column(my_df):
     """
     new_df = my_df.copy()
     names_map = {"CA": "California", "CO": "Colorado", "CT": "Conn"}
-    
 
     new_df["name"] = new_df["abbrev"].map(names_map)
     return my_df
-
-    
 if __name__ == "__main__":
     df = DataFrame({"abbrev": ["CA", "CO", "CT"]})
     print(df)
